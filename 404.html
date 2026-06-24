@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>404 — Stránka sa nenašla | Metalcraft</title>
+<meta name="robots" content="noindex, follow">
+<meta name="theme-color" content="#080C16">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800;900&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  :root{ --abyss:#080C16; --paper:#F6F7F9; --signal:#2563EB; --steel:#64748B; --silver:#CBD5E1; }
+  html,body{ height:100%; }
+  body{
+    background:var(--abyss); color:var(--paper); font-family:'IBM Plex Sans',sans-serif;
+    -webkit-font-smoothing:antialiased; display:grid; place-items:center; padding:24px;
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size:96px 96px;
+  }
+  .wrap{ max-width:560px; text-align:center; }
+  .mark{ display:inline-flex; align-items:center; gap:12px; margin-bottom:40px; }
+  .sq{ width:28px; height:28px; background:var(--signal); }
+  .brand{ font-family:'Archivo',sans-serif; font-weight:800; letter-spacing:-.02em; font-size:21px; }
+  .brand b{ color:var(--signal); font-weight:800; }
+  .code{ font-family:'IBM Plex Mono',monospace; font-size:13px; letter-spacing:.25em; color:var(--steel); text-transform:uppercase; }
+  h1{ font-family:'Archivo',sans-serif; font-weight:900; letter-spacing:-.03em; line-height:.95;
+      font-size:clamp(3rem,16vw,7rem); margin:18px 0 0; }
+  h1 span{ color:var(--signal); }
+  p{ color:var(--silver); font-size:17px; line-height:1.6; margin-top:18px; }
+  p.alt{ color:var(--steel); font-size:14px; margin-top:8px; }
+  .btn{ display:inline-flex; align-items:center; gap:12px; margin-top:32px;
+        background:var(--signal); color:#fff; text-decoration:none; font-weight:600;
+        padding:16px 28px; font-size:15px; transition:background .25s, transform .25s; }
+  .btn:hover{ background:var(--paper); color:var(--abyss); transform:translateY(-2px); }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="mark">
+      <span class="sq"></span>
+      <span class="brand">METAL<b>CRAFT</b></span>
+    </div>
+    <div class="code">Chyba 404 / Error 404 / Fehler 404</div>
+    <h1>Stránka sa<br><span>nenašla.</span></h1>
+    <p>Táto stránka neexistuje alebo bola presunutá.</p>
+    <p class="alt">This page could not be found. · Diese Seite wurde nicht gefunden.</p>
+    <a class="btn" href="/">
+      Späť na úvod / Home
+      <svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg>
+    </a>
+  </div>
+</body>
+</html>

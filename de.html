@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="de" class="scroll-smooth">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080C16">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<title>Metalcraft — Auftragsfertigung von Metallteilen | CNC-Bearbeitung, Schweißen, Pulverbeschichtung</title>
+<meta name="description" content="Metalcraft seit 1994. Auftragsfertigung von Metallteilen unter einem Dach — Materialzuschnitt, Biegen und Pressen, CNC-Bearbeitung, Schweißen, Strahlen und Pulverbeschichtung, Verpackung. Stahl, Edelstahl, Aluminium + 3D-Druck von Prototypen.">
+<meta name="keywords" content="Auftragsfertigung, Metallteile, Metallbearbeitung, CNC-Bearbeitung, Schweißen, Pulverbeschichtung, Materialzuschnitt, Biegen, Pressen, Strahlen, Stahl, Edelstahl, Aluminium, 3D-Druck, Prototypen, Gartenmöbel">
+
+<link rel="canonical" href="https://www.metalcraft.sk/de.html" />
+<link rel="alternate" hreflang="sk" href="https://www.metalcraft.sk/" />
+<link rel="alternate" hreflang="en" href="https://www.metalcraft.sk/en.html" />
+<link rel="alternate" hreflang="de" href="https://www.metalcraft.sk/de.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.metalcraft.sk/" />
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="sk_SK">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:site_name" content="Metalcraft">
+<meta property="og:title" content="Metalcraft — Auftragsfertigung von Metallteilen">
+<meta property="og:description" content="Seit 1994. Zuschnitt, Umformen, CNC-Bearbeitung, Schweißen und Pulverbeschichtung unter einem Dach. Stahl, Edelstahl, Aluminium.">
+<meta property="og:url" content="https://www.metalcraft.sk/de.html">
+<meta property="og:image" content="https://www.metalcraft.sk/images/budova-metalcraft.jpeg">
+<meta property="og:image:width" content="1829">
+<meta property="og:image:height" content="1100">
+<meta property="og:image:alt" content="Produktionsstandort von Metalcraft in der Bystrická 63, Žarnovica">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Metalcraft — Auftragsfertigung von Metallteilen">
+<meta name="twitter:description" content="Seit 1994. Zuschnitt, Umformen, CNC-Bearbeitung, Schweißen und Pulverbeschichtung unter einem Dach. Stahl, Edelstahl, Aluminium.">
+<meta name="twitter:image" content="https://www.metalcraft.sk/images/budova-metalcraft.jpeg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        ink:    '#0F172A',
+        abyss:  '#080C16',
+        steel:  '#64748B',
+        silver: '#CBD5E1',
+        paper:  '#F6F7F9',
+        signal: '#2563EB',
+        ember:  '#F97316',
+      },
+      fontFamily: {
+        display: ['Archivo', 'sans-serif'],
+        sans:    ['"IBM Plex Sans"', 'sans-serif'],
+        mono:    ['"IBM Plex Mono"', 'monospace'],
+      },
+    }
+  }
+}
+</script>
+<style>
+  :root{
+    --ink:#0F172A; --abyss:#080C16; --steel:#64748B; --silver:#CBD5E1;
+    --paper:#F6F7F9; --signal:#2563EB; --ember:#F97316; --line:rgba(15,23,42,.10);
+  }
+  html{ -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
+  body{ background:var(--paper); color:var(--ink); overflow-x:hidden; font-size:17px; line-height:1.6; }
+  ::selection{ background:var(--signal); color:#fff; }
+
+  ::-webkit-scrollbar{ width:10px; height:10px; }
+  ::-webkit-scrollbar-track{ background:#0b1120; }
+  ::-webkit-scrollbar-thumb{ background:#2b3a52; border-radius:10px; }
+  ::-webkit-scrollbar-thumb:hover{ background:var(--signal); }
+
+  .gridlines{
+    background-image:
+      linear-gradient(to right, rgba(255,255,255,.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size:96px 96px;
+  }
+  .gridlines-dark{
+    background-image:
+      linear-gradient(to right, rgba(15,23,42,.055) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(15,23,42,.055) 1px, transparent 1px);
+    background-size:96px 96px;
+  }
+  .noise{ position:relative; }
+  .noise::after{
+    content:""; position:absolute; inset:0; pointer-events:none; z-index:2; opacity:.5; mix-blend-mode:overlay;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .accent-rule{ height:2px; background:linear-gradient(90deg, var(--signal), transparent); }
+
+  .eyebrow{ font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:.22em; text-transform:uppercase; }
+
+  .ulink{ position:relative; }
+  .ulink::after{
+    content:""; position:absolute; left:0; bottom:-4px; height:2px; width:100%;
+    background:currentColor; transform:scaleX(0); transform-origin:right; transition:transform .4s cubic-bezier(.2,.7,.2,1);
+  }
+  .ulink:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+  .reveal{ opacity:0; transform:translateY(30px); transition:opacity .9s cubic-bezier(.16,.8,.24,1), transform .9s cubic-bezier(.16,.8,.24,1); }
+  .reveal.in{ opacity:1; transform:none; }
+
+  @keyframes rise{ from{ transform:translateY(110%);} to{ transform:translateY(0);} }
+  .rise span{ display:block; }
+  .rise.go span{ animation:rise 1s cubic-bezier(.16,.84,.28,1) both; }
+
+  .cap{ transition:transform .5s cubic-bezier(.16,.84,.28,1), background-color .5s, border-color .5s; }
+  .cap:hover{ transform:translateY(-8px); background:#0d1626; border-color:rgba(37,99,235,.35); }
+  .cap .sweep{ transform:scaleX(0); transform-origin:left; transition:transform .55s cubic-bezier(.16,.84,.28,1); }
+  .cap:hover .sweep{ transform:scaleX(1); }
+  .cap .idx{ transition:color .5s; }
+  .cap:hover .idx{ color:var(--signal); }
+  .cap svg{ transition:transform .5s cubic-bezier(.16,.84,.28,1), stroke .5s; }
+  .cap:hover svg{ transform:translateY(-3px) scale(1.05); stroke:#fff; }
+
+  .proj img{ transition:transform 1.1s cubic-bezier(.16,.84,.28,1); }
+  .proj:hover img{ transform:scale(1.05); }
+  .proj .meta{ transform:translateY(12px); opacity:0; transition:transform .55s cubic-bezier(.16,.84,.28,1), opacity .55s; }
+  .proj:hover .meta{ transform:none; opacity:1; }
+  .proj .veil{ transition:opacity .55s; }
+  .proj:hover .veil{ opacity:.95; }
+
+  @keyframes slide{ to{ transform:translateX(-50%);} }
+  .marquee{ animation:slide 40s linear infinite; }
+  .marquee:hover{ animation-play-state:paused; }
+
+  .btn{ transition:background-color .3s, color .3s, border-color .3s, transform .3s; }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-arrow svg{ transition:transform .4s cubic-bezier(.16,.84,.28,1); }
+  .btn:hover .btn-arrow svg{ transform:translateX(6px); }
+
+  .mono-img{ filter:grayscale(1) contrast(1.06) brightness(.85); }
+
+  .lift{ box-shadow:0 30px 70px -34px rgba(15,23,42,.45); }
+  .lift-lg{ box-shadow:0 45px 90px -40px rgba(15,23,42,.55); }
+
+  .lang-active{ color:var(--paper); }
+
+  #nav{ transition:background-color .4s, border-color .4s, box-shadow .4s, height .4s; }
+  #nav.scrolled{ box-shadow:0 12px 40px -24px rgba(0,0,0,.8); }
+  .navlink{ position:relative; color:rgba(241,245,249,.78); transition:color .25s; }
+  .navlink:hover{ color:#fff; }
+  .navlink::after{
+    content:""; position:absolute; left:0; bottom:-6px; height:2px; width:100%; background:var(--signal);
+    transform:scaleX(0); transform-origin:right; transition:transform .35s cubic-bezier(.2,.7,.2,1);
+  }
+  .navlink:hover::after{ transform:scaleX(1); transform-origin:left; }
+
+  .fin{ width:34px; height:34px; border-radius:999px; box-shadow:inset 0 0 0 1px rgba(15,23,42,.18); position:relative; }
+  .fin[aria-pressed="true"]{ box-shadow:inset 0 0 0 1px rgba(15,23,42,.18), 0 0 0 2px var(--paper), 0 0 0 4px var(--signal); }
+
+  /* product 3D viewer */
+  .tilt-stage{ perspective:1100px; }
+  .tilt{ transition:transform .35s cubic-bezier(.16,.84,.28,1); transform-style:preserve-3d; will-change:transform; }
+  .pthumb{ position:relative; opacity:.62; transition:opacity .25s, box-shadow .25s; box-shadow:inset 0 0 0 1px rgba(15,23,42,.12); }
+  .pthumb:hover{ opacity:.9; }
+  .pthumb[aria-pressed="true"]{ opacity:1; box-shadow:0 0 0 2px var(--paper), 0 0 0 4px var(--signal); }
+
+  /* quote modal */
+  .modal-card{ animation:modalIn .3s cubic-bezier(.16,.84,.28,1) both; }
+  @keyframes modalIn{ from{ opacity:0; transform:translateY(18px) scale(.98);} to{ opacity:1; transform:none;} }
+  .fld{ width:100%; background:#fff; border:1px solid rgba(15,23,42,.16); color:var(--ink); font-size:15px; padding:11px 14px; transition:border-color .2s, box-shadow .2s; }
+  .fld::placeholder{ color:#94a3b8; }
+  .fld:focus{ outline:none; border-color:var(--signal); box-shadow:0 0 0 3px rgba(37,99,235,.15); }
+  .fld-l{ display:block; font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--steel); margin-bottom:6px; }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.metalcraft.sk/#business",
+  "name": "Metalcraft",
+  "url": "https://www.metalcraft.sk/de.html",
+  "image": "https://www.metalcraft.sk/images/budova-metalcraft.jpeg",
+  "logo": "https://www.metalcraft.sk/favicon.png",
+  "foundingDate": "1994",
+  "description": "Auftragsfertigung von Metallteilen unter einem Dach — Materialzuschnitt, Umformen, CNC-Bearbeitung, Schweißen, Strahlen und Pulverbeschichtung. Stahl, Edelstahl, Aluminium und 3D-Druck von Prototypen.",
+  "telephone": "+421 38 000 0000",
+  "email": "info@metalcraft.sk",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Bystrická 63",
+    "postalCode": "966 81",
+    "addressLocality": "Žarnovica",
+    "addressCountry": "SK"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 48.4847,
+    "longitude": 18.7178
+  },
+  "areaServed": ["SK", "CZ", "AT", "DE", "EU"],
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "06:00",
+    "closes": "18:00"
+  }]
+}
+</script>
+</head>
+
+<body class="font-sans">
+
+<!-- ░░ INFOLEISTE ░░ -->
+<div class="hidden md:flex items-center justify-between bg-abyss text-silver/70 font-mono text-[12px] tracking-wide px-6 lg:px-12 py-2.5 border-b border-white/5">
+  <div class="flex items-center gap-5">
+    <span class="flex items-center gap-2 text-signal"><span class="w-1.5 h-1.5 rounded-full bg-signal animate-pulse"></span>WERK ŽARNOVICA</span>
+    <span class="text-steel/50">/</span>
+    <span>SEIT 1994 · STAHL · EDELSTAHL · ALUMINIUM</span>
+  </div>
+  <div class="flex items-center gap-5">
+    <span class="text-silver/55">MO–FR 06:00–18:00</span>
+    <span class="text-steel/50">/</span>
+    <a href="tel:+421380000000" class="hover:text-paper transition">+421 38 000 0000</a>
+    <span class="text-steel/50">/</span>
+    <span class="flex items-center gap-2">
+      <a href="index.html" hreflang="sk" class="hover:text-paper transition">SK</a>
+      <span class="text-steel/40">·</span>
+      <a href="en.html" hreflang="en" class="hover:text-paper transition">EN</a>
+      <span class="text-steel/40">·</span>
+      <span class="lang-active">DE</span>
+    </span>
+  </div>
+</div>
+
+<!-- ░░ NAVIGATION ░░ -->
+<header id="nav" class="sticky top-0 z-50 bg-abyss/90 backdrop-blur-xl border-b border-white/10">
+  <nav class="flex items-center justify-between px-6 lg:px-12 h-[78px]">
+    <a href="#top" class="flex items-center gap-3 group shrink-0">
+      <span class="w-7 h-7 bg-signal"></span>
+      <span class="font-display font-extrabold tracking-tight text-paper text-[21px] leading-none">METAL<span class="text-signal">CRAFT</span></span>
+    </a>
+
+    <ul class="hidden lg:flex items-center gap-9 text-[15px] font-medium">
+      <li><a href="#capabilities" class="navlink">Leistungen</a></li>
+      <li><a href="#about" class="navlink">Betrieb</a></li>
+      <li><a href="#product" class="navlink text-paper">Unser&nbsp;Produkt</a></li>
+      <li><a href="#process" class="navlink">Ablauf</a></li>
+    </ul>
+
+    <div class="flex items-center gap-4">
+      <a href="tel:+421380000000" class="hidden xl:block font-mono text-[14px] text-silver/70 hover:text-paper transition">+421 38 000 0000</a>
+      <a href="#quote" class="btn group hidden sm:inline-flex items-center gap-3 bg-signal text-white hover:bg-signal/80 px-6 py-3 text-[14px] font-semibold tracking-wide">
+        <span>Kontakt</span>
+        <span class="btn-arrow"><svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+      </a>
+      <button id="menuBtn" class="lg:hidden grid place-items-center w-11 h-11 border border-white/15 text-paper hover:border-signal transition" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <svg class="menu-open" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+        <svg class="menu-close hidden" width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 5l10 10M15 5L5 15"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- mobile menu -->
+  <div id="mobileMenu" class="lg:hidden hidden border-t border-white/10 bg-abyss/97 backdrop-blur-xl">
+    <ul class="px-6 py-3 flex flex-col divide-y divide-white/8 text-paper/90 text-[17px] font-medium">
+      <li><a href="#capabilities" class="mobile-link flex items-center justify-between py-4">Leistungen<span class="font-mono text-[12px] text-signal">01</span></a></li>
+      <li><a href="#about" class="mobile-link flex items-center justify-between py-4">Betrieb<span class="font-mono text-[12px] text-signal">02</span></a></li>
+      <li><a href="#product" class="mobile-link flex items-center justify-between py-4">Unser Produkt<span class="font-mono text-[12px] text-signal">03</span></a></li>
+      <li><a href="#gallery" class="mobile-link flex items-center justify-between py-4">Galerie<span class="font-mono text-[12px] text-signal">04</span></a></li>
+      <li><a href="#process" class="mobile-link flex items-center justify-between py-4">Ablauf<span class="font-mono text-[12px] text-signal">05</span></a></li>
+      <li class="pt-4 pb-3"><a href="#quote" class="mobile-link flex items-center justify-between gap-3 bg-signal text-white px-5 py-4 font-semibold">Kontakt<svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg></a></li>
+      <li class="flex items-center gap-4 py-4 font-mono text-[13px] tracking-wide text-silver/60">
+        <span class="text-steel">Sprache:</span>
+        <a href="index.html" hreflang="sk" class="hover:text-paper transition">SK</a>
+        <a href="en.html" hreflang="en" class="hover:text-paper transition">EN</a>
+        <span class="text-paper">DE</span>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<!-- ░░ HERO ░░ -->
+<section id="top" class="relative min-h-[88vh] flex flex-col bg-abyss text-paper noise overflow-hidden">
+  <div class="absolute inset-0">
+    <img loading="eager" fetchpriority="high" decoding="async" src="images/brusenie-iskry.jpeg" alt="Schleifen und Metallbearbeitung in der Fertigung von Metalcraft Žarnovica" class="w-full h-full object-cover opacity-45 mono-img scale-105">
+    <div class="absolute inset-0 bg-gradient-to-r from-abyss via-abyss/90 to-abyss/40"></div>
+    <div class="absolute inset-0 bg-gradient-to-t from-abyss via-transparent to-abyss/70"></div>
+  </div>
+  <div class="absolute inset-0 gridlines opacity-50"></div>
+
+  <div class="hidden md:block absolute top-10 right-8 lg:right-12 text-right font-mono text-[12px] text-silver/55 leading-relaxed z-10">
+    <div>48.4847° N / 18.7178° E</div>
+    <div class="mt-1.5 text-signal">SEIT 1994</div>
+    <div class="mt-1.5">STAHL · EDELSTAHL · ALUMINIUM</div>
+  </div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 lg:px-12 pt-14 pb-10 w-full">
+    <div class="max-w-[1180px] w-full min-w-0">
+      <div class="flex flex-wrap items-center gap-x-4 gap-y-2 eyebrow text-silver/70 mb-8 reveal">
+        <span class="text-signal">◢</span>
+        <span>Metallteile nach Maß</span>
+        <span class="hidden sm:inline w-14 h-px bg-steel/40"></span>
+        <span>Žarnovica, seit 1994</span>
+      </div>
+
+      <h1 class="font-display font-black leading-[0.95] tracking-[-0.025em] text-[clamp(2.1rem,7.2vw,8rem)]">
+        <span class="rise block overflow-hidden"><span>Wir fertigen</span></span>
+        <span class="rise block overflow-hidden" style="animation-delay:.08s"><span class="text-steel">Ihr Bauteil</span></span>
+        <span class="rise block overflow-hidden" style="animation-delay:.16s"><span>genau nach Maß<span class="text-signal">.</span></span></span>
+      </h1>
+
+      <p class="mt-9 max-w-[60ch] text-silver/80 text-[18px] md:text-[19px] leading-relaxed reveal">
+        Wir sind eine Metallbau-Werkstatt in Žarnovica. Seit 1994 fertigen wir Metallteile
+        nach Maß — ob Einzelstück oder Serie. Zuschnitt, Umformen, CNC-Bearbeitung, Schweißen
+        und Pulverbeschichtung erledigen wir <span class="text-paper font-medium">im eigenen
+        Haus</span>, sodass der ganze Auftrag an einem Ort bleibt. Wir arbeiten mit Stahl,
+        Edelstahl und Aluminium.
+      </p>
+
+      <div class="mt-11 flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 reveal">
+        <a href="#quote" class="btn group inline-flex justify-center items-center gap-3 bg-signal text-white hover:bg-paper hover:text-ink px-8 py-4 text-[16px] font-semibold tracking-wide">
+          <span>Angebot anfordern</span>
+          <span class="btn-arrow"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+        </a>
+        <a href="#gallery" class="inline-flex justify-center items-center gap-3 border border-white/25 text-paper hover:bg-white/10 px-8 py-4 text-[16px] font-semibold tracking-wide transition">
+          <span>Fertigung ansehen</span>
+        </a>
+      </div>
+
+      <div class="mt-14 grid grid-cols-3 gap-x-5 gap-y-6 max-w-lg reveal">
+        <div>
+          <div class="font-display font-extrabold text-[clamp(1.6rem,6vw,2rem)] leading-none">32<span class="text-signal">+</span></div>
+          <div class="eyebrow text-steel mt-2">Jahre Erfahrung</div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-[clamp(1.6rem,6vw,2rem)] leading-none">3</div>
+          <div class="eyebrow text-steel mt-2">Stahl · Edelstahl · Alu</div>
+        </div>
+        <div>
+          <div class="font-display font-extrabold text-[clamp(1.6rem,6vw,2rem)] leading-none">100<span class="text-signal">%</span></div>
+          <div class="eyebrow text-steel mt-2">eigene Fertigung</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- marquee -->
+  <div class="relative z-10 border-t border-white/10 bg-abyss/60 overflow-hidden">
+    <div class="flex whitespace-nowrap marquee py-3.5 font-mono text-[13px] tracking-[0.18em] text-silver/55">
+      <div class="flex shrink-0">
+        <span class="px-7">AUFTRAGSFERTIGUNG</span><span class="text-signal">✦</span>
+        <span class="px-7">MATERIALZUSCHNITT</span><span class="text-signal">✦</span>
+        <span class="px-7">BIEGEN &amp; RUNDEN</span><span class="text-signal">✦</span>
+        <span class="px-7">PRESSEN</span><span class="text-signal">✦</span>
+        <span class="px-7">CNC-BEARBEITUNG</span><span class="text-signal">✦</span>
+        <span class="px-7">SCHWEISSEN</span><span class="text-signal">✦</span>
+        <span class="px-7">PULVERBESCHICHTUNG</span><span class="text-signal">✦</span>
+        <span class="px-7">3D-DRUCK</span><span class="text-signal">✦</span>
+      </div>
+      <div class="flex shrink-0" aria-hidden="true">
+        <span class="px-7">AUFTRAGSFERTIGUNG</span><span class="text-signal">✦</span>
+        <span class="px-7">MATERIALZUSCHNITT</span><span class="text-signal">✦</span>
+        <span class="px-7">BIEGEN &amp; RUNDEN</span><span class="text-signal">✦</span>
+        <span class="px-7">PRESSEN</span><span class="text-signal">✦</span>
+        <span class="px-7">CNC-BEARBEITUNG</span><span class="text-signal">✦</span>
+        <span class="px-7">SCHWEISSEN</span><span class="text-signal">✦</span>
+        <span class="px-7">PULVERBESCHICHTUNG</span><span class="text-signal">✦</span>
+        <span class="px-7">3D-DRUCK</span><span class="text-signal">✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ LEISTUNGEN ░░ -->
+<section id="capabilities" class="relative bg-abyss text-paper noise overflow-hidden">
+  <div class="absolute inset-0 gridlines opacity-40"></div>
+  <div class="relative z-10 px-6 lg:px-12 py-24 lg:py-32 max-w-[1500px] mx-auto">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 reveal">
+      <div>
+        <div class="flex items-center gap-4 eyebrow text-signal mb-6">
+          <span>01 — Was wir tun</span><span class="w-14 h-px bg-steel/40"></span>
+        </div>
+        <h2 class="font-display font-extrabold leading-[0.98] tracking-[-0.02em] text-[clamp(2.4rem,5.2vw,4.6rem)] max-w-[16ch]">
+          Der ganze Prozess.<br><span class="text-steel">Unter einem Dach.</span>
+        </h2>
+      </div>
+      <p class="max-w-[42ch] text-silver/75 text-[17px] leading-relaxed">
+        Alles vom Materialeinkauf bis zum verpackten Produkt erledigen wir selbst. Sie müssen
+        nicht einen Lieferanten fürs Zuschneiden, einen fürs Bearbeiten und einen fürs
+        Lackieren suchen — wir übernehmen den ganzen Auftrag, und Sie haben nur einen Termin.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/10 border border-white/10">
+      <!-- 01 -->
+      <article class="cap relative bg-abyss p-9 lg:p-10 min-h-[320px] flex flex-col">
+        <div class="sweep absolute top-0 left-0 right-0 h-[3px] bg-signal"></div>
+        <div class="flex items-start justify-between">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9aa6b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="7.5"/><circle cx="12" cy="12" r="2"/><path d="M12 4.5v1.8M12 17.7v1.8M19.5 12h-1.8M6.3 12H4.5M17.3 6.7l-1.3 1.3M8 16l-1.3 1.3M17.3 17.3l-1.3-1.3M8 8 6.7 6.7"/></svg>
+          <span class="idx font-mono text-[14px] text-steel">01</span>
+        </div>
+        <h3 class="font-display font-bold text-[24px] mt-auto tracking-tight">Materialzuschnitt</h3>
+        <p class="text-silver/65 text-[15.5px] leading-relaxed mt-3">Lager für Hüttenmaterial mit Portalkran, CNC-Bandsägen und manuelle Kreissägen für den präzisen Zuschnitt von Profilen und Blechen.</p>
+        <span class="eyebrow text-steel/70 mt-5">Schneiden · Sägen</span>
+      </article>
+      <!-- 02 -->
+      <article class="cap relative bg-abyss p-9 lg:p-10 min-h-[320px] flex flex-col">
+        <div class="sweep absolute top-0 left-0 right-0 h-[3px] bg-signal"></div>
+        <div class="flex items-start justify-between">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9aa6b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3h14"/><path d="M12 3v5"/><path d="M8 8h8l-4 5z"/><rect x="4" y="17" width="16" height="4" rx="1"/></svg>
+          <span class="idx font-mono text-[14px] text-steel">02</span>
+        </div>
+        <h3 class="font-display font-bold text-[24px] mt-auto tracking-tight">Umformen &amp; Pressen</h3>
+        <p class="text-silver/65 text-[15.5px] leading-relaxed mt-3">Manuelle und NC-Abkantpressen, Profilrundmaschinen und eine breite Palette an Exzenterpressen mit NC-Vorschub.</p>
+        <span class="eyebrow text-steel/70 mt-5">Biegen · Runden · Pressen</span>
+      </article>
+      <!-- 03 -->
+      <article class="cap relative bg-abyss p-9 lg:p-10 min-h-[320px] flex flex-col">
+        <div class="sweep absolute top-0 left-0 right-0 h-[3px] bg-signal"></div>
+        <div class="flex items-start justify-between">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9aa6b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
+          <span class="idx font-mono text-[14px] text-steel">03</span>
+        </div>
+        <h3 class="font-display font-bold text-[24px] mt-auto tracking-tight">CNC-Bearbeitung</h3>
+        <p class="text-silver/65 text-[15.5px] leading-relaxed mt-3">Werkzeugmacherei mit Drehmaschinen, Fräsen und Schleifmaschinen, dazu CNC-Bearbeitungszentren inkl. horizontaler Palettenfräse und 8-Achs-Zentrum.</p>
+        <span class="eyebrow text-steel/70 mt-5">Drehen · Fräsen · Schleifen</span>
+      </article>
+      <!-- 04 -->
+      <article class="cap relative bg-abyss p-9 lg:p-10 min-h-[320px] flex flex-col">
+        <div class="sweep absolute top-0 left-0 right-0 h-[3px] bg-signal"></div>
+        <div class="flex items-start justify-between">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9aa6b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>
+          <span class="idx font-mono text-[14px] text-steel">04</span>
+        </div>
+        <h3 class="font-display font-bold text-[24px] mt-auto tracking-tight">Schweißen</h3>
+        <p class="text-silver/65 text-[15.5px] leading-relaxed mt-3">Voll ausgestattete Schweißplätze inkl. CNC-Palettenschweißroboter für wiederholbare, präzise Nähte.</p>
+        <span class="eyebrow text-steel/70 mt-5">MIG · TIG · Roboter</span>
+      </article>
+      <!-- 05 -->
+      <article class="cap relative bg-abyss p-9 lg:p-10 min-h-[320px] flex flex-col">
+        <div class="sweep absolute top-0 left-0 right-0 h-[3px] bg-signal"></div>
+        <div class="flex items-start justify-between">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9aa6b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8.5" y="9" width="7" height="11" rx="1.5"/><path d="M10 9V6.5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1V9"/><path d="M11 5.5V4h2v1.5"/><path d="M16.5 5h0M18.6 4h0M17.5 7h0M19.6 6h0"/></svg>
+          <span class="idx font-mono text-[14px] text-steel">05</span>
+        </div>
+        <h3 class="font-display font-bold text-[24px] mt-auto tracking-tight">Oberflächenbehandlung</h3>
+        <p class="text-silver/65 text-[15.5px] leading-relaxed mt-3">Großstrahlanlage zur Vorbehandlung, automatische Pulverbeschichtungslinie sowie Schleifen und Polieren.</p>
+        <span class="eyebrow text-steel/70 mt-5">Strahlen · Pulver · Polieren</span>
+      </article>
+      <!-- 06 -->
+      <article class="cap relative bg-abyss p-9 lg:p-10 min-h-[320px] flex flex-col">
+        <div class="sweep absolute top-0 left-0 right-0 h-[3px] bg-signal"></div>
+        <div class="flex items-start justify-between">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#9aa6b8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="M3.3 7 12 12l8.7-5"/><path d="M12 22V12"/></svg>
+          <span class="idx font-mono text-[14px] text-steel">06</span>
+        </div>
+        <h3 class="font-display font-bold text-[24px] mt-auto tracking-tight">3D-Druck &amp; Prototypen</h3>
+        <p class="text-silver/65 text-[15.5px] leading-relaxed mt-3">Prototypen-3D-Druck mit anspruchsvolleren technischen Materialien — ABS/ASA, Nylon, Polycarbonat oder TPU.</p>
+        <span class="eyebrow text-steel/70 mt-5">ABS/ASA · Nylon · PC · TPU</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ BETRIEB ░░ -->
+<section id="about" class="relative bg-paper text-ink overflow-hidden">
+  <div class="absolute inset-0 gridlines-dark opacity-60"></div>
+  <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12">
+    <div class="lg:col-span-7 px-6 lg:px-12 py-24 lg:py-32 lg:border-r border-ink/10">
+      <div class="flex items-center gap-4 eyebrow text-signal mb-6 reveal">
+        <span>02 — Betrieb</span><span class="w-14 h-px bg-ink/20"></span>
+      </div>
+      <h2 class="font-display font-extrabold leading-[1] tracking-[-0.02em] text-[clamp(2.2rem,4.6vw,4.2rem)] max-w-[18ch] reveal">
+        Seit 1994 — vom Rohmaterial bis zum fertigen Teil.
+      </h2>
+      <p class="mt-8 max-w-[60ch] text-steel text-[17.5px] leading-relaxed reveal">
+        Wir betreiben ein Lager für Hüttenmaterial mit Portalkran, das mit den Schneidplätzen
+        verbunden ist, eine Werkzeugmacherei, CNC-Bearbeitungszentren, Schweißplätze inkl.
+        Roboterzelle und eine automatische Pulverbeschichtungsanlage. Eigene Lagerflächen für
+        Verpackungsmaterial und Fertigware mit Verladerampe — die gesamte Kette bleibt im Haus.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 mt-14 gap-px bg-ink/10 border border-ink/10 reveal">
+        <div class="bg-paper p-6">
+          <div class="font-display font-extrabold text-[clamp(2.2rem,4vw,3.2rem)] tracking-tight leading-none"><span class="count" data-to="32">0</span></div>
+          <div class="eyebrow text-steel mt-3">Jahre im Betrieb</div>
+        </div>
+        <div class="bg-paper p-6">
+          <div class="font-display font-extrabold text-[clamp(2.2rem,4vw,3.2rem)] tracking-tight leading-none"><span class="count" data-to="3">0</span></div>
+          <div class="eyebrow text-steel mt-3">Metalle — Stahl, Edelstahl, Alu</div>
+        </div>
+        <div class="bg-paper p-6">
+          <div class="font-display font-extrabold text-[clamp(2.2rem,4vw,3.2rem)] tracking-tight leading-none"><span class="count" data-to="100">0</span><span class="text-signal">%</span></div>
+          <div class="eyebrow text-steel mt-3">eigene Fertigung</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:col-span-5 relative min-h-[440px] lg:min-h-full bg-abyss noise">
+      <img loading="lazy" decoding="async" src="images/budova-metalcraft.jpeg" alt="Gebäude von Metalcraft in der Bystrická 63 in Žarnovica" class="absolute inset-0 w-full h-full object-cover">
+      <div class="absolute inset-0 bg-gradient-to-t from-abyss via-abyss/20 to-transparent"></div>
+      <div class="absolute bottom-0 left-0 right-0 p-9 text-paper">
+        <div class="eyebrow text-signal mb-2">Werk — Žarnovica</div>
+        <div class="font-display font-bold text-[24px] leading-tight">Bystrická 63.<br>Eigene Fertigung, ganze Kette.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ UNSER PRODUKT — GARTEN-LOUNGE-SET ░░ -->
+<section id="product" class="relative bg-paper text-ink overflow-hidden">
+  <div class="absolute inset-0 gridlines-dark opacity-50"></div>
+  <div class="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full bg-ember/10 blur-3xl pointer-events-none"></div>
+  <div class="relative z-10 px-6 lg:px-12 py-24 lg:py-32 max-w-[1500px] mx-auto">
+
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16 reveal">
+      <div>
+        <div class="flex items-center gap-4 eyebrow text-ember mb-6">
+          <span>03 — Unser Produkt</span><span class="w-14 h-px bg-ink/20"></span>
+        </div>
+        <h2 class="font-display font-extrabold leading-[0.98] tracking-[-0.02em] text-[clamp(2.4rem,5.2vw,4.6rem)] max-w-[15ch]">
+          Garten-Lounge-Set.<br><span class="text-steel">Bei uns entworfen und gefertigt.</span>
+        </h2>
+      </div>
+      <p class="max-w-[42ch] text-steel text-[17px] leading-relaxed">
+        Neben der Auftragsfertigung haben wir ein eigenes Produkt. Wir haben es komplett bei
+        uns entworfen und gefertigt — vom Aluminiumrahmen bis zur finalen Beschichtung.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+      <!-- viewer -->
+      <div class="lg:col-span-7 reveal">
+        <div id="prodStage" class="tilt-stage relative">
+          <figure class="tilt relative overflow-hidden lift-lg bg-ink">
+            <img id="prodMain" loading="lazy" decoding="async" src="products/341ecf4c-b627-4686-a7d4-7ed5fea9b581.jpg"
+                 alt="Garten-Lounge-Set MC·Lounge mit Aluminiumrahmen, Frontansicht"
+                 class="w-full h-full object-cover aspect-[3/2]">
+            <figcaption class="absolute top-5 left-5 flex items-center gap-2 bg-abyss/85 backdrop-blur text-paper eyebrow px-4 py-2 pointer-events-none">
+              <span class="w-1.5 h-1.5 rounded-full bg-ember"></span>MC·Lounge — 3-Sitzer
+            </figcaption>
+            <div class="absolute bottom-5 right-5 hidden sm:flex items-center gap-2 font-mono text-[11px] tracking-[0.18em] text-paper/55 pointer-events-none">
+              <span class="w-8 accent-rule inline-block"></span>MAUS BEWEGEN
+            </div>
+          </figure>
+        </div>
+        <!-- thumbnails -->
+        <div class="grid grid-cols-3 gap-3 mt-3">
+          <button class="pthumb overflow-hidden aspect-[4/3]" aria-pressed="true" data-src="products/341ecf4c-b627-4686-a7d4-7ed5fea9b581.jpg" data-alt="Garten-Lounge-Set MC·Lounge, Frontansicht">
+            <img loading="lazy" decoding="async" src="products/341ecf4c-b627-4686-a7d4-7ed5fea9b581.jpg" alt="" class="w-full h-full object-cover">
+          </button>
+          <button class="pthumb overflow-hidden aspect-[4/3]" aria-pressed="false" data-src="products/6ddb34af-9a8b-4747-a355-ae2fd071831c.jpg" data-alt="Gartensofa im Außenbereich — Rahmen- und Kissendetail">
+            <img loading="lazy" decoding="async" src="products/6ddb34af-9a8b-4747-a355-ae2fd071831c.jpg" alt="" class="w-full h-full object-cover">
+          </button>
+          <button class="pthumb overflow-hidden aspect-[4/3]" aria-pressed="false" data-src="products/1941b2da-e5f1-4252-a6e8-e66b1bbbbf39.jpg" data-alt="Garten-Lounge-Set mit Couchtisch, Seitenansicht">
+            <img loading="lazy" decoding="async" src="products/1941b2da-e5f1-4252-a6e8-e66b1bbbbf39.jpg" alt="" class="w-full h-full object-cover">
+          </button>
+        </div>
+      </div>
+
+      <!-- spec panel -->
+      <div class="lg:col-span-5 reveal">
+        <div class="eyebrow text-steel">MC · Lounge Serie</div>
+        <h3 class="font-display font-extrabold text-[clamp(1.8rem,2.6vw,2.4rem)] tracking-tight leading-tight mt-2">Garten-Lounge-Set</h3>
+        <p class="mt-5 text-steel text-[17px] leading-relaxed">
+          Schlanker, anthrazit pulverbeschichteter Aluminiumrahmen, weiche wetterfeste Kissen
+          und ein passender Couchtisch. Für den Außenbereich gemacht und mit derselben Technik
+          gefertigt wie unsere Industrieteile — Zuschnitt, Schweißen und Pulverbeschichtung
+          unter einem Dach.
+        </p>
+
+        <dl class="mt-8 border-y border-ink/12 divide-y divide-ink/10">
+          <div class="flex items-center justify-between py-4">
+            <dt class="eyebrow text-steel">Rahmen</dt><dd class="font-display font-semibold text-[17px]">Aluminiumprofile</dd>
+          </div>
+          <div class="flex items-center justify-between py-4">
+            <dt class="eyebrow text-steel">Oberfläche</dt><dd class="font-display font-semibold text-[17px]">Pulver · Anthrazit</dd>
+          </div>
+          <div class="flex items-center justify-between py-4">
+            <dt class="eyebrow text-steel">Set</dt><dd class="font-display font-semibold text-[17px]">Sofa + Tisch</dd>
+          </div>
+          <div class="flex items-center justify-between py-4">
+            <dt class="eyebrow text-steel">Fertigung</dt><dd class="font-display font-semibold text-[17px]">100 % im Haus</dd>
+          </div>
+        </dl>
+
+        <!-- highlight: Auftragsfertigung ist unser Schwerpunkt -->
+        <div class="mt-8 flex gap-4 border-l-[3px] border-signal bg-signal/[0.06] p-5">
+          <svg class="shrink-0 mt-0.5 text-signal" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/><path d="M9 12l2 2 4-4"/></svg>
+          <div>
+            <div class="eyebrow text-signal mb-1.5">Unser Schwerpunkt — Auftragsfertigung</div>
+            <p class="text-ink/80 text-[14.5px] leading-relaxed">
+              Das Sofa ist nur ein Beispiel dafür, was wir von A bis Z können. Unser Kerngeschäft
+              ist die <strong class="font-semibold text-ink">Auftragsfertigung von Metallteilen</strong>
+              nach Ihrer Zeichnung — vom Einzelstück bis zur Serie.
+              <a href="#quote" class="ulink text-signal font-medium whitespace-nowrap">Anfrage senden →</a>
+            </p>
+          </div>
+        </div>
+
+        <a href="#quote" class="btn group mt-7 inline-flex items-center justify-between gap-3 bg-ink text-paper hover:bg-ember hover:text-white px-7 py-4 text-[16px] font-semibold tracking-wide w-full sm:w-auto">
+          <span>Ich habe Interesse</span>
+          <span class="btn-arrow"><svg width="16" height="16" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ GALERIE ░░ -->
+<section id="gallery" class="relative bg-ink text-paper noise overflow-hidden">
+  <div class="absolute inset-0 gridlines opacity-25"></div>
+  <div class="relative z-10 px-6 lg:px-12 py-24 lg:py-32 max-w-[1500px] mx-auto">
+    <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-14 reveal">
+      <div>
+        <div class="flex items-center gap-4 eyebrow text-signal mb-6">
+          <span>04 — Einblick in die Werkstatt</span><span class="w-14 h-px bg-steel/40"></span>
+        </div>
+        <h2 class="font-display font-extrabold leading-[0.98] tracking-[-0.02em] text-[clamp(2.4rem,5.2vw,4.6rem)] max-w-[16ch]">
+          So sieht es<br><span class="text-steel">bei uns aus.</span>
+        </h2>
+      </div>
+      <p class="max-w-[36ch] text-silver/70 text-[17px] leading-relaxed">
+        Ein paar Aufnahmen direkt aus der Werkstatt in Žarnovica — vom Sägen des Materials über Bearbeitung und Beschichtung bis zum Verpacken der fertigen Teile.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal">
+        <img loading="lazy" decoding="async" src="images/pilka-delenie.jpeg" alt="Materialzuschnitt auf der Bandsäge" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">Zuschnitt — Bandsäge</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.04s">
+        <img loading="lazy" decoding="async" src="images/lis-excentricky.jpeg" alt="Pressen auf der Exzenterpresse" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">Pressen</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.08s">
+        <img loading="lazy" decoding="async" src="images/cnc-freza-01.jpeg" alt="CNC-Fräsen mit Kühlung" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">CNC-Fräsen</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.12s">
+        <img loading="lazy" decoding="async" src="images/cnc-sustruh-02.jpeg" alt="CNC-Drehen in der Spannzange" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">CNC-Drehen</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.04s">
+        <img loading="lazy" decoding="async" src="images/cnc-vrtanie.jpeg" alt="CNC-Bohren von Löchern" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">Bohren</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.08s">
+        <img loading="lazy" decoding="async" src="images/lakovanie-striek-01.jpeg" alt="Pulverbeschichtung von Teilen" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">Pulverbeschichtung</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.12s">
+        <img loading="lazy" decoding="async" src="images/lakovanie-kabina.jpeg" alt="Beschichtungskabine und Förderband" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">Beschichtungslinie</figcaption>
+      </figure>
+      <figure class="proj relative group overflow-hidden bg-abyss aspect-[4/3] reveal" style="transition-delay:.16s">
+        <img loading="lazy" decoding="async" src="images/balenie-02.jpeg" alt="Verpackung fertiger Teile" class="absolute inset-0 w-full h-full object-cover opacity-90">
+        <div class="veil absolute inset-0 bg-gradient-to-t from-abyss/90 via-transparent to-transparent opacity-70"></div>
+        <figcaption class="absolute bottom-0 left-0 p-4 eyebrow text-silver/85">Verpackung &amp; Versand</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ ABLAUF ░░ -->
+<section id="process" class="relative bg-paper text-ink overflow-hidden">
+  <div class="absolute inset-0 gridlines-dark opacity-60"></div>
+  <div class="relative z-10 px-6 lg:px-12 py-24 lg:py-32 max-w-[1500px] mx-auto">
+    <div class="flex items-center gap-4 eyebrow text-signal mb-6 reveal">
+      <span>05 — Von der Zeichnung bis zum Versand</span><span class="w-14 h-px bg-ink/20"></span>
+    </div>
+    <h2 class="font-display font-extrabold leading-[1] tracking-[-0.02em] text-[clamp(2.2rem,4.6vw,4.2rem)] max-w-[18ch] mb-16 reveal">
+      So läuft Ihr Auftrag bei uns ab.
+    </h2>
+
+    <div class="relative grid grid-cols-1 md:grid-cols-5 gap-px bg-ink/10 border border-ink/10">
+      <div class="step relative bg-paper p-8 reveal">
+        <div class="font-mono text-[14px] tracking-wide text-signal">01</div>
+        <div class="mt-4 mb-5 w-11 h-11 grid place-items-center bg-ink text-paper"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 3h12v12H3zM3 7h12M7 7v8"/></svg></div>
+        <h3 class="font-display font-bold text-[19px] tracking-tight">Anfrage &amp; Zeichnung</h3>
+        <p class="text-steel text-[15px] leading-relaxed mt-2">Wir prüfen Ihre Zeichnung oder Spezifikation und bestätigen die Machbarkeit.</p>
+      </div>
+      <div class="step relative bg-paper p-8 reveal" style="transition-delay:.06s">
+        <div class="font-mono text-[14px] tracking-wide text-signal">02</div>
+        <div class="mt-4 mb-5 w-11 h-11 grid place-items-center bg-ink text-paper"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 9h12M6 5l-3 4 3 4M12 5l3 4-3 4"/></svg></div>
+        <h3 class="font-display font-bold text-[19px] tracking-tight">Materialzuschnitt</h3>
+        <p class="text-steel text-[15px] leading-relaxed mt-2">Aus unserem Materiallager, geschnitten auf CNC-Band- und Kreissägen.</p>
+      </div>
+      <div class="step relative bg-paper p-8 reveal" style="transition-delay:.12s">
+        <div class="font-mono text-[14px] tracking-wide text-signal">03</div>
+        <div class="mt-4 mb-5 w-11 h-11 grid place-items-center bg-ink text-paper"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 13l6-6 3 3M9 4l5 5-7 5H3v-4z"/></svg></div>
+        <h3 class="font-display font-bold text-[19px] tracking-tight">Fertigung</h3>
+        <p class="text-steel text-[15px] leading-relaxed mt-2">Umformen, Pressen, CNC-Bearbeitung und Schweißen auf kalibrierten Maschinen.</p>
+      </div>
+      <div class="step relative bg-paper p-8 reveal" style="transition-delay:.18s">
+        <div class="font-mono text-[14px] tracking-wide text-signal">04</div>
+        <div class="mt-4 mb-5 w-11 h-11 grid place-items-center bg-ink text-paper"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M3 12h12M5 12V8M9 12V6M13 12V8M4 6l3-2 4 2 3-3"/></svg></div>
+        <h3 class="font-display font-bold text-[19px] tracking-tight">Oberflächenbehandlung</h3>
+        <p class="text-steel text-[15px] leading-relaxed mt-2">Strahlen und automatische Pulverbeschichtung, dazu Schleifen und Polieren.</p>
+      </div>
+      <div class="step relative bg-paper p-8 reveal" style="transition-delay:.24s">
+        <div class="font-mono text-[14px] tracking-wide text-signal">05</div>
+        <div class="mt-4 mb-5 w-11 h-11 grid place-items-center bg-ink text-paper"><svg width="20" height="20" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M2 12V6l5-2 5 2v6M2 12l5 2 5-2M2 6l5 2 5-2M12 8l4-1v6l-4 1"/></svg></div>
+        <h3 class="font-display font-bold text-[19px] tracking-tight">Verpackung &amp; Versand</h3>
+        <p class="text-steel text-[15px] leading-relaxed mt-2">In Folie, Styropor und Kartons verpackt, Versand von der Verladerampe.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ ANGEBOT-CTA ░░ -->
+<section id="quote" class="relative bg-signal text-white noise overflow-hidden">
+  <div class="absolute inset-0 gridlines opacity-20"></div>
+  <div class="relative z-10 px-6 lg:px-12 py-24 lg:py-28 max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-8">
+      <div class="eyebrow text-white/75 mb-6">Hier starten — senden Sie uns Ihre Zeichnung</div>
+      <h2 class="font-display font-black leading-[0.95] tracking-[-0.02em] text-[clamp(2.4rem,5.6vw,5.2rem)] max-w-[15ch]">
+        Ein Teil zu fertigen? Wir kalkulieren es.
+      </h2>
+      <p class="mt-7 max-w-[54ch] text-white/85 text-[18px] leading-relaxed">
+        Senden Sie uns eine Zeichnung, eine 3D-Datei oder einfach ein Foto und eine Beschreibung.
+        Wir schauen es uns an und melden uns mit einem konkreten Preis und Termin — unverbindlich
+        und direkt von den Leuten aus der Fertigung.
+      </p>
+    </div>
+    <div class="lg:col-span-4 flex flex-col gap-4">
+      <button type="button" data-open-quote class="btn group w-full flex items-center justify-between gap-3 bg-ink text-white hover:bg-abyss px-7 py-5 text-[16px] font-semibold tracking-wide">
+        <span>Kontakt</span>
+        <span class="btn-arrow"><svg width="17" height="17" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+      </button>
+      <a href="tel:+421380000000" class="btn group flex items-center justify-between gap-3 border border-white/40 text-white hover:bg-white/10 px-7 py-5 text-[16px] font-semibold tracking-wide">
+        <span>+421 38 000 0000</span>
+        <span class="font-mono text-[12px] text-white/70">ANRUFEN</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ░░ FOOTER ░░ -->
+<footer class="relative bg-abyss text-silver/70 noise overflow-hidden">
+  <div class="absolute inset-0 gridlines opacity-30"></div>
+  <div class="relative z-10 px-6 lg:px-12 pt-20 pb-10 max-w-[1500px] mx-auto">
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-12 pb-16 border-b border-white/10">
+      <div class="md:col-span-5">
+        <a href="#top" class="flex items-center gap-3 mb-6">
+          <span class="w-7 h-7 bg-signal"></span>
+          <span class="font-display font-extrabold tracking-tight text-paper text-[21px]">METAL<span class="text-signal">CRAFT</span></span>
+        </a>
+        <p class="max-w-[44ch] text-silver/65 text-[16px] leading-relaxed">
+          Auftragsfertigung von Metallteilen seit 1994 — Zuschnitt, Umformen, CNC-Bearbeitung,
+          Schweißen und Pulverbeschichtung unter einem Dach. Stahl, Edelstahl und Aluminium.
+        </p>
+        <div class="flex items-center gap-3 mt-7">
+          <a href="#" aria-label="LinkedIn" class="w-10 h-10 grid place-items-center border border-white/15 hover:border-signal hover:bg-white/5 hover:text-paper transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0-.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.5c0-1.3-.02-3-1.85-3-1.85 0-2.13 1.44-2.13 2.9V21H9z"/></svg></a>
+          <a href="#" aria-label="Instagram" class="w-10 h-10 grid place-items-center border border-white/15 hover:border-signal hover:bg-white/5 hover:text-paper transition"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+
+      <div class="md:col-span-2">
+        <div class="eyebrow text-steel mb-5">Leistungen</div>
+        <ul class="space-y-3 text-[16px]">
+          <li><a href="#capabilities" class="ulink hover:text-paper transition">Materialzuschnitt</a></li>
+          <li><a href="#capabilities" class="ulink hover:text-paper transition">CNC-Bearbeitung</a></li>
+          <li><a href="#capabilities" class="ulink hover:text-paper transition">Schweißen</a></li>
+          <li><a href="#capabilities" class="ulink hover:text-paper transition">Pulverbeschichtung</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-2">
+        <div class="eyebrow text-steel mb-5">Unternehmen</div>
+        <ul class="space-y-3 text-[16px]">
+          <li><a href="#about" class="ulink hover:text-paper transition">Betrieb</a></li>
+          <li><a href="#product" class="ulink hover:text-paper transition">Unser Produkt</a></li>
+          <li><a href="#process" class="ulink hover:text-paper transition">Ablauf</a></li>
+          <li><a href="index.html" hreflang="sk" class="ulink hover:text-paper transition">Slovenská verzia</a></li>
+          <li><a href="en.html" hreflang="en" class="ulink hover:text-paper transition">English version</a></li>
+        </ul>
+      </div>
+      <div class="md:col-span-3">
+        <div class="eyebrow text-steel mb-5">Kontakt</div>
+        <ul class="space-y-3 text-[16px] text-silver/70">
+          <li class="text-paper/90">Bystrická 63<br>966 81 Žarnovica, SK</li>
+          <li><a href="tel:+421380000000" class="ulink hover:text-paper transition">+421 38 000 0000</a></li>
+          <li><a href="mailto:info@metalcraft.sk" class="ulink hover:text-paper transition">info@metalcraft.sk</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-between pt-8">
+      <div class="flex flex-wrap items-center gap-x-6 gap-y-2 font-mono text-[12px] tracking-wide text-steel/70">
+        <span>© 2026 Metalcraft · Žarnovica</span>
+        <span>USt-IdNr. 00 000 000</span>
+        <span>SEIT 1994</span>
+        <a href="#" class="hover:text-paper transition">Datenschutz</a>
+        <a href="#" class="hover:text-paper transition">AGB</a>
+        <span class="text-steel/40">48.4847° N / 18.7178° E</span>
+      </div>
+      <div class="flex items-center gap-3 shrink-0" style="font-family:system-ui,-apple-system,'Segoe UI',sans-serif;font-size:14.5px;line-height:1;color:#9fb2d4;">
+        <a href="https://lumaweb.sk" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;color:#9fb2d4;text-decoration:none;transition:color .2s;" onmouseover="this.style.color='#cfe0ff';" onmouseout="this.style.color='#9fb2d4';">
+          <span style="width:7px;height:7px;border-radius:50%;background:#7eb3ff;box-shadow:0 0 8px #4a7eff;"></span>
+          <span><strong style="color:#7eb3ff;font-weight:700;">LumaWeb</strong></span>
+        </a>
+        <span style="width:1px;height:14px;background:rgba(126,179,255,.25);"></span>
+        <a href="https://voidsolutions.eu" target="_blank" rel="noopener" style="color:#6b7a99;text-decoration:none;font-size:13px;transition:color .2s;" onmouseover="this.style.color='#9fb2d4';" onmouseout="this.style.color='#6b7a99';">powered by Void Solutions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ░░ MODAL — ANGEBOT ANFORDERN ░░ -->
+<div id="quoteModal" class="fixed inset-0 z-[100] hidden" role="dialog" aria-modal="true" aria-labelledby="quoteTitle">
+  <div class="absolute inset-0 bg-abyss/80 backdrop-blur-sm" data-close-quote></div>
+  <div class="absolute inset-0 overflow-y-auto p-4 sm:p-6 flex items-start sm:items-center justify-center">
+    <div class="modal-card relative w-full max-w-lg bg-paper text-ink border border-ink/10 shadow-2xl my-6">
+      <button data-close-quote aria-label="Schließen" class="absolute top-4 right-4 grid place-items-center w-9 h-9 border border-ink/15 text-ink/70 hover:border-signal hover:text-ink transition">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 4l8 8M12 4l-8 8"/></svg>
+      </button>
+      <div class="p-6 sm:p-8">
+        <div class="eyebrow text-signal mb-2">Angebot anfordern</div>
+        <h3 id="quoteTitle" class="font-display font-extrabold text-[clamp(1.5rem,4vw,2rem)] tracking-tight leading-tight">Sagen Sie uns, was Sie brauchen</h3>
+        <p class="mt-2 text-steel text-[14.5px] leading-relaxed">Füllen Sie das Formular aus und Ihr E-Mail-Programm öffnet sich vorausgefüllt — einfach absenden.</p>
+
+        <form id="quoteForm" class="mt-6 space-y-4"
+              data-email="info@metalcraft.sk"
+              data-subject="Anfrage — Angebot (Metalcraft)"
+              data-l-name="Name &amp; Firma" data-l-email="E-Mail" data-l-phone="Telefon" data-l-msg="Anfrage">
+          <div>
+            <label class="fld-l" for="qname">Name &amp; Firma</label>
+            <input class="fld" id="qname" name="qname" type="text" required placeholder="Max Mustermann, Firma GmbH">
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="fld-l" for="qemail">E-Mail</label>
+              <input class="fld" id="qemail" name="qemail" type="email" required placeholder="ihre@email.de">
+            </div>
+            <div>
+              <label class="fld-l" for="qphone">Telefon <span class="text-steel/60 normal-case">(optional)</span></label>
+              <input class="fld" id="qphone" name="qphone" type="tel" placeholder="+421 …">
+            </div>
+          </div>
+          <div>
+            <label class="fld-l" for="qmsg">Was sollen wir fertigen?</label>
+            <textarea class="fld" id="qmsg" name="qmsg" rows="4" required placeholder="Kurze Beschreibung des Teils, Menge, Material, Termin…"></textarea>
+          </div>
+          <button type="submit" class="btn group w-full inline-flex justify-center items-center gap-3 bg-signal text-white hover:bg-ink px-6 py-4 text-[15px] font-semibold tracking-wide">
+            <span>Anfrage senden</span>
+            <span class="btn-arrow"><svg width="15" height="15" viewBox="0 0 14 14" fill="none"><path d="M2 7h9M7 3l4 4-4 4" stroke="currentColor" stroke-width="1.8"/></svg></span>
+          </button>
+        </form>
+
+        <div class="mt-7 pt-6 border-t border-ink/10">
+          <div class="eyebrow text-steel mb-3">Oder kontaktieren Sie uns direkt</div>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <a href="mailto:info@metalcraft.sk" class="flex-1 inline-flex items-center justify-center gap-2 border border-ink/15 hover:border-signal hover:text-signal px-4 py-3 text-[14px] font-semibold transition">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              info@metalcraft.sk
+            </a>
+            <a href="tel:+421380000000" class="flex-1 inline-flex items-center justify-center gap-2 border border-ink/15 hover:border-signal hover:text-signal px-4 py-3 text-[14px] font-semibold transition">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L20 13l-1 4a2 2 0 0 1-2 1.5A16 16 0 0 1 3.5 6 2 2 0 0 1 5 4z"/></svg>
+              +421 38 000 0000
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  /* nav background on scroll */
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 30);
+  onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+
+  /* mobile menu */
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const setMenu = (open) => {
+    mobileMenu.classList.toggle('hidden', !open);
+    menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    menuBtn.querySelector('.menu-open').classList.toggle('hidden', open);
+    menuBtn.querySelector('.menu-close').classList.toggle('hidden', !open);
+  };
+  menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+  document.querySelectorAll('.mobile-link').forEach(l => l.addEventListener('click', () => setMenu(false)));
+
+  /* quote modal */
+  const quoteModal = document.getElementById('quoteModal');
+  const quoteForm = document.getElementById('quoteForm');
+  let lastFocus = null;
+  const openQuote = () => {
+    lastFocus = document.activeElement;
+    setMenu(false);
+    quoteModal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    const first = quoteModal.querySelector('input, textarea');
+    if (first) setTimeout(() => first.focus(), 60);
+  };
+  const closeQuote = () => {
+    quoteModal.classList.add('hidden');
+    document.body.style.overflow = '';
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  };
+  document.querySelectorAll('[data-open-quote]').forEach(el =>
+    el.addEventListener('click', (e) => { e.preventDefault(); openQuote(); }));
+  document.querySelectorAll('[data-close-quote]').forEach(el => el.addEventListener('click', closeQuote));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && quoteModal && !quoteModal.classList.contains('hidden')) closeQuote(); });
+  if (quoteForm) quoteForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const d = quoteForm.dataset;
+    const val = (n) => quoteForm.elements[n] ? quoteForm.elements[n].value.trim() : '';
+    const body = [
+      d.lName + ': ' + val('qname'),
+      d.lEmail + ': ' + val('qemail'),
+      val('qphone') ? d.lPhone + ': ' + val('qphone') : null,
+      '',
+      val('qmsg')
+    ].filter((x) => x !== null).join('\r\n');
+    window.location.href = 'mailto:' + d.email + '?subject=' + encodeURIComponent(d.subject) + '&body=' + encodeURIComponent(body);
+  });
+
+  /* hero rise */
+  window.addEventListener('load', () => document.querySelectorAll('.rise').forEach(el => el.classList.add('go')));
+
+  /* reveal on scroll */
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold:.12, rootMargin:'0px 0px -8% 0px' });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  /* count-up stats */
+  const countObs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      const el = e.target; const to = parseFloat(el.dataset.to);
+      const dur = 1400; const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min((t - t0) / dur, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.textContent = Math.round(to * eased).toLocaleString('de-DE');
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick); countObs.unobserve(el);
+    });
+  }, { threshold:.6 });
+  document.querySelectorAll('.count').forEach(el => countObs.observe(el));
+
+  /* product viewer — thumbnail switch */
+  const prodMain = document.getElementById('prodMain');
+  document.querySelectorAll('.pthumb').forEach(t => t.addEventListener('click', () => {
+    if (prodMain){ prodMain.src = t.dataset.src; prodMain.alt = t.dataset.alt || ''; }
+    document.querySelectorAll('.pthumb').forEach(x => x.setAttribute('aria-pressed','false'));
+    t.setAttribute('aria-pressed','true');
+  }));
+
+  /* product viewer — subtle 3D tilt on pointer move */
+  const prodStage = document.getElementById('prodStage');
+  const prodTilt = prodStage ? prodStage.querySelector('.tilt') : null;
+  if (prodStage && prodTilt && window.matchMedia('(pointer:fine)').matches){
+    prodStage.addEventListener('mousemove', (e) => {
+      const r = prodStage.getBoundingClientRect();
+      const px = (e.clientX - r.left) / r.width - .5;
+      const py = (e.clientY - r.top) / r.height - .5;
+      prodTilt.style.transform = `rotateY(${px*7}deg) rotateX(${-py*7}deg) scale(1.02)`;
+    });
+    prodStage.addEventListener('mouseleave', () => { prodTilt.style.transform = ''; });
+  }
+</script>
+</body>
+</html>
