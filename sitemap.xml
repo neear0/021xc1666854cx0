@@ -1,34 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.metalcraft.sk/</loc>
-    <lastmod>2026-06-24</lastmod>
+    <loc>https://agvservis.sk/</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://agvservis.sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agvservis.sk/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agvservis.sk/"/>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="sk" href="https://www.metalcraft.sk/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.metalcraft.sk/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.metalcraft.sk/de.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.metalcraft.sk/"/>
   </url>
   <url>
-    <loc>https://www.metalcraft.sk/en.html</loc>
-    <lastmod>2026-06-24</lastmod>
+    <loc>https://agvservis.sk/en.html</loc>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://agvservis.sk/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://agvservis.sk/en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://agvservis.sk/"/>
+    <lastmod>2026-07-26</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="sk" href="https://www.metalcraft.sk/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.metalcraft.sk/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.metalcraft.sk/de.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.metalcraft.sk/"/>
-  </url>
-  <url>
-    <loc>https://www.metalcraft.sk/de.html</loc>
-    <lastmod>2026-06-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="sk" href="https://www.metalcraft.sk/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://www.metalcraft.sk/en.html"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://www.metalcraft.sk/de.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.metalcraft.sk/"/>
   </url>
 </urlset>

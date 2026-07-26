@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.metalcraft.sk/sitemap.xml
+Sitemap: https://agvservis.sk/sitemap.xml
