@@ -191,7 +191,8 @@
   })();
 
   // --- Kontakt: otvorí e-mailový program cez mailto (bez servera/formulárovej služby) ---
-  var MAIL_TO = "agvservis@agvservis.sk";
+  // formulárové dopyty chodia na dotaz@ – kvôli identifikácii v prijatých mailoch
+  var MAIL_TO = "dotaz@agvservis.sk";
   var isEN = (document.documentElement.lang || "sk").toLowerCase().indexOf("en") === 0;
   var T = isEN ? {
     fill: "Please fill in the subject and message.",

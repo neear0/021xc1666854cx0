@@ -107,14 +107,17 @@ header.scrolled{background:rgba(14,15,18,.95)}
 }
 .eyebrow::before{content:"";width:42px;height:2px;background:var(--accent);flex:none}
 .hero .lead{font-size:clamp(18px,2.1vw,22px);color:var(--text);font-weight:500;margin-bottom:18px;max-width:640px}
-.hero h1{font-size:clamp(38px,5.4vw,66px);margin:0 0 26px;line-height:1.04}
+/* hlavný nadpis – presné veľké/malé písmená podľa zadania (bez text-transform) */
+.hero h1{font-size:clamp(34px,4.9vw,60px);margin:0 0 24px;line-height:1.16;color:#fff;text-transform:none}
+/* slogan pod plaketou Q-SERVICE */
+.hero .hero-slogan{font-size:clamp(19px,2.3vw,25px);font-weight:600;letter-spacing:.4px;margin-bottom:30px}
 .hero p{font-size:17px;color:var(--muted);max-width:540px;margin-bottom:38px}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
 
 /* hero – príslušnosť k sieti Q-SERVICE (plaketa) */
 .hero .hero-qs{
   display:inline-flex;align-items:center;gap:15px;
-  max-width:540px;margin:0 0 34px;padding:12px 20px 12px 15px;
+  max-width:540px;margin:0 0 22px;padding:12px 20px 12px 15px;
   border:1px solid rgba(255,255,255,.16);border-left:3px solid var(--accent);
   border-radius:14px;background:rgba(255,255,255,.07);
   -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
@@ -228,6 +231,10 @@ section{padding:104px 0;position:relative;scroll-margin-top:90px}
 .gallery a:hover img{transform:scale(1.07)}
 .gallery a:hover::after{opacity:1}
 
+/* širokouhlé (panoramatické) zábery – 2 v rade */
+.gallery.gallery-wide{grid-template-columns:repeat(2,1fr);margin-top:12px}
+.gallery.gallery-wide a{aspect-ratio:16/7}
+
 /* ---------- KONTAKT ---------- */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
 .info-row{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid var(--line);align-items:flex-start}
@@ -325,10 +332,11 @@ footer{background:var(--bg);border-top:1px solid var(--line);padding:44px 0}
 @media(max-width:520px){
   .cards{grid-template-columns:1fr}
   .gallery{grid-template-columns:repeat(2,1fr)}
+  .gallery.gallery-wide{grid-template-columns:1fr}
   .hero-cta{flex-direction:column;align-items:stretch}
   .hero-cta .btn{justify-content:center}
   .hero-services{grid-template-columns:1fr;gap:9px}
-  .hero .hero-qs{gap:12px;padding:11px 15px 11px 12px;letter-spacing:.6px;margin-bottom:28px}
+  .hero .hero-qs{gap:12px;padding:11px 15px 11px 12px;letter-spacing:.6px;margin-bottom:20px}
   .hero .hero-qs img{height:24px}
   .hero{padding:120px 0 70px}
   .info-row .val{font-size:16.5px;overflow-wrap:anywhere}
